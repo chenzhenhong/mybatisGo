@@ -25,9 +25,13 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <psi.referenceContributor language="JAVA"
-                                  implementation="pers.sanne.my_batis_go.JavaJumpMybatisReferenceContributor"/>
-        <psi.referenceContributor language="XML"
-                                  implementation="pers.sanne.my_batis_go.MybatisJumpJavaReferenceContributor"/>
+        <!--<psi.referenceContributor language="JAVA"-->
+        <!--                          implementation="pers.sanne.my_batis_go.JavaJumpMybatisReferenceContributor"/>-->
+        <!--<psi.referenceContributor language="XML"-->
+        <!--                          implementation="pers.sanne.my_batis_go.MybatisJumpJavaReferenceContributor"/>-->
+        <codeInsight.lineMarkerProvider language="JAVA"
+                                        implementationClass="pers.sanne.my_batis_go.line.marker.JavaJumpMybatisLineMarker"/>
+        <codeInsight.lineMarkerProvider language="XML"
+                                        implementationClass="pers.sanne.my_batis_go.line.marker.MybatisJumpJavaLineMarker"/>
     </extensions>
 </idea-plugin>
